@@ -11,4 +11,6 @@ if (window.matchMedia('(prefers-color-scheme: dark)').matches)
   document.getElementById("darkmode").checked = true;
 
 // Update the datetime every second
-setInterval(() => postMessage(Date()), 1000); // Date().slice(0, 24)
+setInterval(
+  () => document.getElementById("datetime").innerText = Date(),
+1000); // Date().slice(0, 24)
